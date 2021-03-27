@@ -30,7 +30,7 @@
     </div>
     <div class="footer-copy">
         <div class="container">
-            Copyright 2019 &copy; AmigosThemes. All rights reserved.
+            Copyright 2021 &copy; Francisco Benjamin. Tous les droits sont reserves.
         </div>
     </div>
 </footer>

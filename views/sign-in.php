@@ -22,34 +22,34 @@
     <div class="top-block">
         <div class="top-block-content m-auto">
             <div class="system-form">
-                <h4 class="form-title text-uppercase">Sign in</h4>
-                <form autocomplete="off">
+                <h4 class="form-title text-uppercase">Se connecter</h4>
+                <form autocomplete="off" method="post" action="../traitement/traitement_login.php">
                     <div class="row form-grid">
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="email" type="email" placeholder="Email">
+                                <input class="form-control" name="username" type="text" placeholder="Pseudo" required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="password" type="password" placeholder="Password">
+                                <input class="form-control" name="password" type="password" placeholder="Mot de passe" required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="input-view-flat form-check">
-                                <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe" value="false">
+                                <input class="form-check-input" type="checkbox" id="rememberMe" name="remember">
                                 <span class="form-check-icon"></span>
-                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                                <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="w-100 btn btn-theme" type="submit">Sign in</button>
+                            <button class="w-100 btn btn-theme" type="submit">Se connecter</button>
                         </div>
                     </div>
                 </form>
                 <p class="form-subtext">
                     Vous n'avez pas de compte?
-                    <a href="sign-up.php">Sign up!</a>
+                    <a href="sign-up.php">S'inscrire</a>
                 </p>
             </div>
         </div>

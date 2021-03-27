@@ -22,39 +22,37 @@
     <div class="top-block">
         <div class="top-block-content m-auto">
             <div class="system-form">
-                <h4 class="form-title text-uppercase">Sign up</h4>
-                <form autocomplete="off">
+                <h4 class="form-title text-uppercase">S'inscrire</h4>
+                <form autocomplete="off" method="post" action="../traitement/traitement_register.php">
                     <div class="row form-grid">
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="name" type="text" placeholder="Name">
+                                <input class="form-control" name="pseudo" type="text" placeholder="Pseudo" required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="email" type="email" placeholder="Email">
+                                <input class="form-control" name="email" type="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="password" type="password" placeholder="Password">
+                                <input class="form-control" name="password" type="password" placeholder="Mot de passe" required>
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="input-view-flat form-check">
-                                <input class="form-check-input" type="checkbox" id="policy" name="policy" value="false">
-                                <span class="form-check-icon"></span>
-                                <label class="form-check-label" for="policy">I agree to the <a href="#">privacy policy</a></label>
+                            <div class="input-view-flat input-group">
+                                <input class="form-control" name="repassword" type="password" placeholder="Confirmation Mot de passe" required>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="w-100 btn btn-theme" type="submit">Sign up</button>
+                            <button class="w-100 btn btn-theme" type="submit">S'inscrire</button>
                         </div>
                     </div>
                 </form>
                 <p class="form-subtext">
-                    Already have an account?&nbsp;
-                    <a href="sign-in.html">Sign in!</a>
+                    Vous n'avez deja un compte?
+                    <a href="sign-in.php">Se connecter</a>
                 </p>
             </div>
         </div>

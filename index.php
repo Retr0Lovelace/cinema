@@ -69,13 +69,12 @@
                                 </div>
                                 <ul class="collapse nav">
                                     <li class="nav-item"><a class="nav-link" href="coming-soon.html">Coming soon</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="views/404-1.html">404 - 1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="views/404.php">404 - 1</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="views/movies-list.html">Movies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="views/contact-us.php">Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="views/movies-list.php">Movies</a></li>
                 </ul>
                 <div class="navbar-extra">
                     <!-- <a class="btn-theme btn" href="#"><i class="fas fa-ticket-alt"></i>&nbsp;&nbsp;Buy Ticket</a> -->
@@ -108,9 +107,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">crime</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">crime</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">comedy</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">comedy</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -142,9 +141,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">comedy</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">comedy</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">horror</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">horror</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -176,7 +175,7 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">sport</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">sport</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -208,9 +207,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">drama</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">drama</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">historical</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">historical</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -242,9 +241,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">comedy</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">comedy</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">detective</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">detective</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -276,9 +275,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">romance</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">romance</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">historical</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">historical</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -310,9 +309,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">historical</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">historical</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">adventure</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">adventure</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -344,9 +343,9 @@
                                     </a>
                                 </div>
                                 <div class="entity-category">
-                                    <a class="content-link" href="movies-blocks.html">thriller</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">thriller</a>
                                     ,
-                                    <a class="content-link" href="movies-blocks.html">horror</a>
+                                    <a class="content-link" href="views/article-sidebar-right.php">horror</a>
                                 </div>
                                 <div class="entity-info">
                                     <div class="info-lines">
@@ -409,9 +408,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">crime</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">crime</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">comedy</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">comedy</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -474,9 +473,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">comedy</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">comedy</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">horror</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">horror</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -539,7 +538,7 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">sport</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">sport</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -602,9 +601,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">drama</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">drama</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">historical</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">historical</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -667,9 +666,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">comedy</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">comedy</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">detective</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">detective</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -732,9 +731,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">romance</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">romance</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">historical</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">historical</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -797,9 +796,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">historical</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">historical</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">adventure</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">adventure</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -862,9 +861,9 @@
             </div>
             <div class="entity-content">
                 <div class="entity-category">
-                    <a class="content-link" href="movies-blocks.html">thriller</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">thriller</a>
                     ,
-                    <a class="content-link" href="movies-blocks.html">horror</a>
+                    <a class="content-link" href="views/article-sidebar-right.php">horror</a>
                 </div>
                 <div class="entity-info">
                     <div class="info-lines">
@@ -940,9 +939,9 @@
                         <div class="entity-content">
 
                             <div class="entity-category">
-                                <a class="content-link" href="movies-blocks.html">sport</a>
+                                <a class="content-link" href="views/article-sidebar-right.php">sport</a>
                                 ,
-                                <a class="content-link" href="movies-blocks.html">musical</a>
+                                <a class="content-link" href="views/article-sidebar-right.php">musical</a>
                             </div>
                             <div class="entity-info">
                                 <div class="info-lines">
@@ -979,7 +978,7 @@
                         </div>
                         <div class="entity-content">
                             <div class="entity-category">
-                                <a class="content-link" href="movies-blocks.html">drama</a>
+                                <a class="content-link" href="views/article-sidebar-right.php">drama</a>
                             </div>
                             <div class="entity-info">
                                 <div class="info-lines">
@@ -1016,9 +1015,9 @@
                         </div>
                         <div class="entity-content">
                             <div class="entity-category">
-                                <a class="content-link" href="movies-blocks.html">drama</a>
+                                <a class="content-link" href="views/article-sidebar-right.php">drama</a>
                                 ,
-                                <a class="content-link" href="movies-blocks.html">superhero</a>
+                                <a class="content-link" href="views/article-sidebar-right.php">superhero</a>
                             </div>
                             <div class="entity-info">
                                 <div class="info-lines">
@@ -1067,7 +1066,7 @@
         <div class="grid row">
             <div class="col-md-6">
                 <article class="article-tape-entity">
-                    <a class="entity-preview" href="views/article-sidebar-right.html" data-role="hover-wrap">
+                    <a class="entity-preview" href="views/views/article-sidebar-right.php" data-role="hover-wrap">
                         <span class="embed-responsive embed-responsive-16by9"><img class="embed-responsive-item" src="http://via.placeholder.com/720x405" alt="" /></span>
                         <span class="entity-date">
 									<span class="tape-block tape-horizontal tape-single bg-theme text-white">
@@ -1081,19 +1080,19 @@
 								</span>
                     </a>
                     <div class="entity-content">
-                        <h4 class="entity-title"><a class="content-link" href="views/article-sidebar-right.html">Creative life</a></h4>
+                        <h4 class="entity-title"><a class="content-link" href="views/views/article-sidebar-right.php">Creative life</a></h4>
                         <p class="text-short entity-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur ultrices justo a pellentesque. Praesent venenatis dolor nec tempus lacinia. Donec ac condimentum dolor. Nullam sit amet nisl hendrerit, pharetra nulla convallis, malesuada diam. Donec ornare nisl eu lectus rhoncus, at malesuada metus rutrum. Aliquam a nisl vulputate, sodales ipsum aliquam, tempus purus. Suspendisse convallis, lectus nec vehicula sollicitudin, lorem sapien rhoncus dolor, vel lacinia urna velit ullamcorper nisi. Phasellus pellentesque, magna nec gravida feugiat, est magna suscipit ligula, vel porttitor nunc enim at nibh. Sed varius sit amet leo vitae consequat.
                         </p>
                         <div class="entity-actions">
-                            <a class="text-uppercase" href="views/article-sidebar-right.html">Read More</a>
+                            <a class="text-uppercase" href="views/views/article-sidebar-right.php">Read More</a>
                         </div>
                     </div>
                 </article>
             </div>
             <div class="col-md-6">
                 <article class="article-tape-entity">
-                    <a class="entity-preview" href="views/article-sidebar-right.html" data-role="hover-wrap">
+                    <a class="entity-preview" href="views/views/article-sidebar-right.php" data-role="hover-wrap">
                         <span class="embed-responsive embed-responsive-16by9"><img class="embed-responsive-item" src="http://via.placeholder.com/720x405" alt="" /></span>
                         <span class="entity-date">
 									<span class="tape-block tape-horizontal tape-single bg-theme text-white">
@@ -1107,19 +1106,19 @@
 								</span>
                     </a>
                     <div class="entity-content">
-                        <h4 class="entity-title"><a class="content-link" href="views/article-sidebar-right.html">One step to the end</a></h4>
+                        <h4 class="entity-title"><a class="content-link" href="views/views/article-sidebar-right.php">One step to the end</a></h4>
                         <p class="text-short entity-text">
                             Vivamus dolor ex, viverra ut facilisis et, euismod et quam. Aliquam sit amet mattis velit, ullamcorper venenatis magna. Aenean ac maximus magna. Proin pharetra venenatis tortor, ac suscipit est ultrices vitae. Mauris vulputate, nisl in lacinia dignissim, libero justo vehicula arcu, a porttitor quam erat ac dui. Suspendisse potenti. Maecenas sit amet interdum sem. Vestibulum sit amet volutpat mauris, ut gravida velit. Donec ultricies, eros ut finibus volutpat, enim ligula tempus enim, non bibendum libero tellus at velit. Aenean placerat egestas ullamcorper.
                         </p>
                         <div class="entity-actions">
-                            <a class="text-uppercase" href="views/article-sidebar-right.html">Read More</a>
+                            <a class="text-uppercase" href="views/views/article-sidebar-right.php">Read More</a>
                         </div>
                     </div>
                 </article>
             </div>
             <div class="col-md-6">
                 <article class="article-tape-entity">
-                    <a class="entity-preview" href="views/article-sidebar-right.html" data-role="hover-wrap">
+                    <a class="entity-preview" href="views/views/article-sidebar-right.php" data-role="hover-wrap">
                         <span class="embed-responsive embed-responsive-16by9"><img class="embed-responsive-item" src="http://via.placeholder.com/720x405" alt="" /></span>
                         <span class="entity-date">
 									<span class="tape-block tape-horizontal tape-single bg-theme text-white">
@@ -1133,19 +1132,19 @@
 								</span>
                     </a>
                     <div class="entity-content">
-                        <h4 class="entity-title"><a class="content-link" href="views/article-sidebar-right.html">Here we go again</a></h4>
+                        <h4 class="entity-title"><a class="content-link" href="views/views/article-sidebar-right.php">Here we go again</a></h4>
                         <p class="text-short entity-text">
                             In luctus ac nisi vel vulputate. Sed blandit augue ut ex eleifend, ac posuere dolor sollicitudin. Mauris tempus euismod mauris id semper. Vestibulum ut vulputate elit, id ultricies libero. Aenean laoreet mi augue, at iaculis nisi aliquam eu. Quisque nec ipsum vehicula diam egestas porttitor eu vitae ex. Curabitur auctor tortor elementum leo faucibus, sit amet imperdiet ante maximus. Nulla viverra tortor dignissim purus placerat dapibus nec ut orci. Quisque efficitur nulla quis pulvinar dapibus. Phasellus sodales tortor sit amet sagittis condimentum. Donec ac ultricies ex. In odio leo, rhoncus aliquam bibendum sit amet, varius sit amet nisl.
                         </p>
                         <div class="entity-actions">
-                            <a class="text-uppercase" href="views/article-sidebar-right.html">Read More</a>
+                            <a class="text-uppercase" href="views/views/article-sidebar-right.php">Read More</a>
                         </div>
                     </div>
                 </article>
             </div>
             <div class="col-md-6">
                 <article class="article-tape-entity">
-                    <a class="entity-preview" href="views/article-sidebar-right.html" data-role="hover-wrap">
+                    <a class="entity-preview" href="views/views/article-sidebar-right.php" data-role="hover-wrap">
                         <span class="embed-responsive embed-responsive-16by9"><img class="embed-responsive-item" src="http://via.placeholder.com/720x405" alt="" /></span>
                         <span class="entity-date">
 									<span class="tape-block tape-horizontal tape-single bg-theme text-white">
@@ -1159,12 +1158,12 @@
 								</span>
                     </a>
                     <div class="entity-content">
-                        <h4 class="entity-title"><a class="content-link" href="views/article-sidebar-right.html">The one and the other</a></h4>
+                        <h4 class="entity-title"><a class="content-link" href="views/views/article-sidebar-right.php">The one and the other</a></h4>
                         <p class="text-short entity-text">
                             Aenean molestie turpis eu aliquam bibendum. Nulla facilisi. Vestibulum quis risus in lorem suscipit tempor. Morbi consectetur enim vitae justo finibus consectetur. Mauris volutpat nunc dui, quis condimentum dolor efficitur et. Phasellus rhoncus porta nunc eu fermentum. Nullam vitae erat hendrerit, tempor arcu eget, eleifend tortor.
                         </p>
                         <div class="entity-actions">
-                            <a class="text-uppercase" href="views/article-sidebar-right.html">Read More</a>
+                            <a class="text-uppercase" href="views/views/article-sidebar-right.php">Read More</a>
                         </div>
                     </div>
                 </article>

@@ -7,7 +7,7 @@ class bdd
     public function __construct()
     {
         try {
-            $this->bdd = new PDO('mysql:host=localhost;dbname=library;charset=utf8', 'root', '');
+            $this->bdd = new PDO('mysql:host=localhost;dbname=projet_cinema;charset=utf8', 'root', '');
             $this->bdd->exec('SET CHARACTER SET utf8');
         }
        catch(Exception $e){

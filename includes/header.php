@@ -45,41 +45,12 @@
                     <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
                         <a class="nav-link" href="#">Accueil</a>
                     </li>
-                    <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
-                        <a class="nav-link" href="#" data-role="nav-toggler">Film</a>
-                        <div class="nav-arrow">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <ul class="collapse nav">
-                            <li class="nav-item"><a class="nav-link" href="article-sidebar-right.html">Article</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about-us.php">About us</a></li>
-                            <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
-                                <a class="nav-link" href="#" data-role="nav-toggler">User pages</a>
-                                <div class="nav-arrow">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div>
-                                <ul class="collapse nav">
-                                    <li class="nav-item"><a class="nav-link" href="sign-in.php">Sign in</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign up</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
-                                <a class="nav-link" href="#" data-role="nav-toggler">Status pages</a>
-                                <div class="nav-arrow">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div>
-                                <ul class="collapse nav">
-                                    <li class="nav-item"><a class="nav-link" href="coming-soon.html">Coming soon</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="404-1.html">404 - 1</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="movies-list.html">Movies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact-us.php">Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movies-list.php">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.php">A propos de nous</a></li>
                 </ul>
                 <div class="navbar-extra">
-                    <a class="btn-theme btn" href="#"><i class="fas fa-ticket-alt"></i>&nbsp;&nbsp;Buy Ticket</a>
+                    <!-- <a class="btn-theme btn" href="#"><i class="fas fa-ticket-alt"></i>&nbsp;&nbsp;Buy Ticket</a> -->
+                    <a class="btn-theme btn" href="sign-in.php"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Se connecter</a>
                 </div>
             </div>
         </nav>
