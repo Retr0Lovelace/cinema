@@ -1,7 +1,7 @@
 <?php include '../includes/header.php';?>
 
         <section class="after-head d-flex section-text-white position-relative">
-            <div class="d-background" data-image-src="http://via.placeholder.com/1920x1080" data-parallax="scroll"></div>
+            <div class="d-background" data-image-src="../assets/images/bg-login.jpg" data-parallax="scroll"></div>
             <div class="d-background bg-black-80"></div>
             <div class="top-block top-inner container">
                 <div class="top-block-content">

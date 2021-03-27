@@ -27,7 +27,7 @@
 <header class="header header-horizontal header-view-pannel">
     <div class="container">
         <nav class="navbar">
-            <a class="navbar-brand" href="./">
+            <a class="navbar-brand" href="../index.php">
 						<span class="logo-element">
 							<span class="logo-tape"><span class="svg-content svg-fill-theme" data-svg="assets/images/svg/logo-part.svg"></span></span>
 							<span class="logo-text text-uppercase"><span>S</span>honen Cinema</span>
@@ -45,36 +45,8 @@
                     <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
                         <a class="nav-link" href="#">Accueil</a>
                     </li>
-                    <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
-                        <a class="nav-link" href="#" data-role="nav-toggler">Film</a>
-                        <div class="nav-arrow">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <ul class="collapse nav">
-                            <li class="nav-item"><a class="nav-link" href="views/about-us.php">About us</a></li>
-                            <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
-                                <a class="nav-link" href="#" data-role="nav-toggler">User pages</a>
-                                <div class="nav-arrow">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div>
-                                <ul class="collapse nav">
-                                    <li class="nav-item"><a class="nav-link" href="views/sign-in.php">Sign in</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="views/sign-up.html">Sign up</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
-                                <a class="nav-link" href="#" data-role="nav-toggler">Status pages</a>
-                                <div class="nav-arrow">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div>
-                                <ul class="collapse nav">
-                                    <li class="nav-item"><a class="nav-link" href="coming-soon.html">Coming soon</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="views/404.php">404 - 1</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="views/movies-list.php">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="views/movies-list.php">Film</a></li>
+                    <li class="nav-item"><a class="nav-link" href="views/about-us.php">A propos de nous</a></li>
                 </ul>
                 <div class="navbar-extra">
                     <!-- <a class="btn-theme btn" href="#"><i class="fas fa-ticket-alt"></i>&nbsp;&nbsp;Buy Ticket</a> -->
@@ -1224,15 +1196,7 @@
                     Movies
                 </h5>
                 <ul class="list-unstyled list-wide footer-content">
-                    <li><a class="content-link" href="movies-list.html">All Movies</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <h5 class="footer-title text-uppercase">
-                    Information
-                </h5>
-                <ul class="list-unstyled list-wide footer-content">
-                    <li><a class="content-link" href="contact-us.html">Contact us</a></li>
+                    <li><a class="content-link" href="views/movies-list.php">All Movies</a></li>
                 </ul>
             </div>
         </div>

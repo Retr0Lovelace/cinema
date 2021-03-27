@@ -45,7 +45,7 @@
                     <li class="nav-item nav-item-arrow-down nav-hover-show-sub">
                         <a class="nav-link" href="#">Accueil</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="movies-list.php">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movies-list.php">Film</a></li>
                     <li class="nav-item"><a class="nav-link" href="about-us.php">A propos de nous</a></li>
                 </ul>
                 <div class="navbar-extra">
