@@ -1,6 +1,6 @@
 /* global initMap:true */
 
-initMap = false;
+initMap = true;
 
 (function (fn) {
     if (typeof jQuery === 'undefined') {
@@ -662,7 +662,7 @@ initMap = false;
             new google.maps.Marker({
               position: mark,
               map: map,
-              icon: data.marker || "./images/parts/map-marker.png"
+              icon: data.marker || "../assets/images/parts/map-marker.png"
             });
 
             // Associate the styled map with the MapTypeId and set it to display.
