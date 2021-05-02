@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Shonen - Cinema</title>
+    <title>SPC - Cinema</title>
     <!-- Bootstrap -->
     <link href="../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- Animate.css -->
@@ -30,7 +30,7 @@
             <a class="navbar-brand" href="../index.php">
 						<span class="logo-element">
 							<span class="logo-tape"><span class="svg-content svg-fill-theme" data-svg="../assets/images/svg/logo-part.svg"></span></span>
-							<span class="logo-text text-uppercase"><span>S</span>honen Cinema</span>
+							<span class="logo-text text-uppercase"><span>S</span>PC Cinema</span>
 						</span>
             </a>
             <button class="navbar-toggler" type="button">

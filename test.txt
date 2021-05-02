@@ -1,0 +1,141 @@
+Array
+(
+    [adult] =>
+    [backdrop_path] => /pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg
+    [belongs_to_collection] =>
+    [budget] => 70000000
+    [genres] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 28
+                    [name] => Action
+                )
+
+            [1] => Array
+                (
+                    [id] => 12
+                    [name] => Aventure
+                )
+
+            [2] => Array
+                (
+                    [id] => 14
+                    [name] => Fantastique
+                )
+
+            [3] => Array
+                (
+                    [id] => 878
+                    [name] => Science-Fiction
+                )
+
+        )
+
+    [homepage] => https://www.hbomax.com/zacksnydersjusticeleague
+    [id] => 791373
+    [imdb_id] => tt12361974
+    [original_language] => en
+    [original_title] => Zack Snyder's Justice League
+    [overview] => Bruce Wayne est déterminé à faire en sorte que le sacrifice ultime de Superman ne soit pas vain. Pour cela, avec l'aide de Diana Prince, il met en place un plan pour recruter une équipe de métahumains afin de protéger le monde d'une menace apocalyptique imminente. La tâche s'avère plus difficile qu'il ne l'imaginait, car chacune des recrues doit faire face aux démons de son passé, et les surpasser, pour se rassembler et former une ligue de héros sans précédent. Désormais unis, Batman, Wonder Woman, Aquaman, Cyborg et Flash réussiront-ils à sauver la planète de Steppenwolf, DeSaad, Darkseid et de leurs terribles intentions ?
+    [popularity] => 2176.988
+    [poster_path] => /tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg
+    [production_companies] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 174
+                    [logo_path] => /IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png
+                    [name] => Warner Bros. Pictures
+                    [origin_country] => US
+                )
+
+            [1] => Array
+                (
+                    [id] => 114152
+                    [logo_path] =>
+                    [name] => The Stone Quarry
+                    [origin_country] => US
+                )
+
+            [2] => Array
+                (
+                    [id] => 507
+                    [logo_path] => /z7H707qUWigbjHnJDMfj6QITEpb.png
+                    [name] => Atlas Entertainment
+                    [origin_country] => US
+                )
+
+            [3] => Array
+                (
+                    [id] => 9993
+                    [logo_path] => /2Tc1P3Ac8M479naPp1kYT3izLS5.png
+                    [name] => DC Entertainment
+                    [origin_country] => US
+                )
+
+            [4] => Array
+                (
+                    [id] => 103376
+                    [logo_path] =>
+                    [name] => Access Entertainment
+                    [origin_country] => US
+                )
+
+            [5] => Array
+                (
+                    [id] => 444
+                    [logo_path] => /42UPdZl6B2cFXgNUASR8hSt9mpS.png
+                    [name] => Dune Entertainment
+                    [origin_country] => US
+                )
+
+            [6] => Array
+                (
+                    [id] => 128064
+                    [logo_path] => /13F3Jf7EFAcREU0xzZqJnVnyGXu.png
+                    [name] => DC Films
+                    [origin_country] => US
+                )
+
+            [7] => Array
+                (
+                    [id] => 429
+                    [logo_path] => /2Tc1P3Ac8M479naPp1kYT3izLS5.png
+                    [name] => DC Comics
+                    [origin_country] => US
+                )
+
+        )
+
+    [production_countries] => Array
+        (
+            [0] => Array
+                (
+                    [iso_3166_1] => US
+                    [name] => United States of America
+                )
+
+        )
+
+    [release_date] => 2021-03-18
+    [revenue] => 0
+    [runtime] => 242
+    [spoken_languages] => Array
+        (
+            [0] => Array
+                (
+                    [english_name] => English
+                    [iso_639_1] => en
+                    [name] => English
+                )
+
+        )
+
+    [status] => Released
+    [tagline] => La légion s'unira.
+    [title] => Zack Snyder's Justice League
+    [video] =>
+    [vote_average] => 8.5
+    [vote_count] => 5254
+)

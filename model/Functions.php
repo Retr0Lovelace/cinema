@@ -78,17 +78,52 @@ class Functions
         return $this->id;
     }
 
-    public function fetch_media_info()
+    public function fetch_media()
     {
         $bdd = new bdd();
 
-        $req=$bdd->getStart()->prepare('SELECT * FROM media WHERE id = :id');
-        $req->execute(array(
-            'id'=>$this->getId()
-        ));
-        $donne = $req->fetch();
-        $this->setReq($donne);
+        $req=$bdd->getStart()->prepare('SELECT api_id FROM film');
+        $req->execute();
+        $donne = $req->fetchAll();
+        $data = [];
 
+        foreach ($donne as $key){
+
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => 'https://api.themoviedb.org/3/movie/'.$key['api_id'].'?api_key=cca3a19cf7481e51aad8193c7ca64cc0&language=fr-FR',
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'GET',
+            ));
+
+            $response = json_decode(curl_exec($curl), true);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+                array_push($data,$response);
+            }
+        }
+        return $data;
+    }
+
+    public function fetch_media_salle(){
+        $bdd = new bdd();
+
+        $req=$bdd->getStart()->prepare('SELECT api_id FROM salle');
+        $req->execute();
+        $data = $req->fetchAll();
+
+        return $data;
     }
 
     public function fetch_user(){
@@ -109,15 +144,6 @@ class Functions
             'Date_emprunt' => $param['Date_emprunt'],
             'Date_rendu' => $param['Date_rendu']
         ));
-    }
-
-    public function fetch_media(){
-        $bdd = new bdd();
-
-        $req=$bdd->getStart()->prepare('SELECT * FROM media');
-        $req->execute();
-        $donne = $req->fetchAll();
-        $this->setReq($donne);
     }
 
     public function recherche($a){

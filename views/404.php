@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="status-entity">
                     <div class="entity-icon">4<span class="text-theme">0</span>4</div>
-                    <p class="entity-text">Il semble que cette page n'existe plus</p>
+                    <p class="entity-text">Il semble que cette page n'existe pas</p>
                     <div class="entity-actions">
                         <a class="btn btn-theme" href="../index.php">Retour à la page d'accueil</a>
                     </div>

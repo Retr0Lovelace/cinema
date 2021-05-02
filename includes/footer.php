@@ -3,10 +3,10 @@
     <div class="footer-body container">
         <div class="row">
             <div class="col-sm-6 col-lg-3">
-                <a class="footer-logo" href="../index.php" >
+                <a class="footer-logo" href="../" >
 							<span class="logo-element">
 								<span class="logo-tape"><span class="svg-content svg-fill-theme" data-svg="../assets/images/svg/logo-part.svg"></span></span>
-								<span class="logo-text text-uppercase "><span>S</span>HONEN Cinema</span>
+								<span class="logo-text text-uppercase "><span>S</span>PC CINEMA
 							</span>
                 </a>
             </div>
@@ -15,15 +15,7 @@
                     Movies
                 </h5>
                 <ul class="list-unstyled list-wide footer-content">
-                    <li><a class="content-link" href="movies-list.html">All Movies</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <h5 class="footer-title text-uppercase">
-                    Information
-                </h5>
-                <ul class="list-unstyled list-wide footer-content">
-                    <li><a class="content-link" href="contact-us.html">Contact us</a></li>
+                    <li><a class="content-link" href="movies-list.php">All Movies</a></li>
                 </ul>
             </div>
         </div>
