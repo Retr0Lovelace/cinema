@@ -11,7 +11,7 @@ class manager
 {
 
     public function Connexion(Utilisateur $user){ // Fonction de connexion d'un utilisateur présent dans sign-in.php
-
+        session_start();
         $bdd = new bdd();
 
         $req=$bdd->getStart()->prepare('SELECT * FROM user WHERE username = :username'); // Requête qui récupèrent toutes les informations en rapport avec le username seulement
@@ -20,7 +20,6 @@ class manager
         ));
 
         $resultat = $req->fetch();
-
         $isPasswordCorrect = password_verify($user->getPassword(), $resultat['password']); // test de la compatibilité du mot de passe et du mot de passe crypté
 
         if (!$resultat)
@@ -31,7 +30,6 @@ class manager
         else
         {
             if ($isPasswordCorrect) {
-                session_start();
                 $_SESSION['id'] = $resultat['id'];   //création de la session utilisateur
                 $_SESSION['username'] = $resultat['username'];
                 $_SESSION['role'] = $resultat['role'];
@@ -59,7 +57,7 @@ class manager
         $req=$bdd->getStart()->prepare('SELECT * FROM user WHERE username = :username OR email = :email'); // Requête qui récupèrent toutes les informations pour voir si l'utilisateur n'existe ou non
         $req->execute(array(
             'username'=>$user->getUsername(),
-            'email'=>$user->getMail()
+            'email'=>$user->getEmail()
         ));
 
         $donne = $req->fetch();
@@ -71,17 +69,15 @@ class manager
         $Functions->Errors($user); // gestion d'erreur
 
         if (empty($_SESSION['errors'])){
-            $req1=$bdd->getStart()->prepare('INSERT INTO user (username, nom, prenom, password, email, role) VALUES (:username, :nom, :prenom, :password, :email, :role)'); // Création de l'utilisateur dans la bdd
+            $req1=$bdd->getStart()->prepare('INSERT INTO user (username, password, email, role) VALUES (:username, :password, :email, :role)'); // Création de l'utilisateur dans la bdd
 
             $pass_hache = password_hash($user->getPassword(), PASSWORD_DEFAULT);
 
             $req1->execute(array(
                 'username'=>$user->getUsername(),
-                'nom'=>$user->getNom(),
-                'prenom'=>$user->getPrenom(),
                 'password'=> $pass_hache,
-                'email'=>$user->getMail(),
-                'role'=>(int)$user->getRole()
+                'email'=>$user->getEmail(),
+                'role'=> $user->getRole()
             ));
 
             //$Functions->Mail_ins($user); //envoi du mail d'inscription (Non fonctionnel)
@@ -98,6 +94,18 @@ class manager
 
     }
 
+    public function fetch_user_info(){
+        $bdd = new bdd();
+
+        $req=$bdd->getStart()->prepare('SELECT * FROM user WHERE username = :username');
+        $req->execute(array(
+            'username'=> $_SESSION['username']
+        ));
+        $donne = $req->fetchAll();
+
+        return $donne;
+    }
+
     public function Modification(Utilisateur $user){ // Fonction qui permet à l'utilsateur de modifier ses informations présent dans espace-membre.php
 
         $bdd = new bdd();
@@ -105,7 +113,7 @@ class manager
 
         if ($user->getPassword() != $user->getRepassword()){
             $Functions = new Functions();
-            $Functions->Error($user); // Gestion d'erreur
+            $Functions->Errors($user); // Gestion d'erreur
         }
         else{
 
@@ -115,10 +123,8 @@ class manager
             $req->execute(array(
                 'id' => $_SESSION['id'],
                 'username'=>$user->getUsername(),
-                'nom'=>$user->getNom(),
-                'prenom'=>$user->getPrenom(),
                 'password'=> $pass_hache,
-                'email'=>$user->getMail(),
+                'email'=>$user->getEmail(),
                 'role'=>(int)$_SESSION['role']
             ));
         }

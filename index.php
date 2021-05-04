@@ -52,8 +52,11 @@
                     <li class="nav-item"><a class="nav-link" href="views/about-us.php">A propos de nous</a></li>
                 </ul>
                 <div class="navbar-extra">
-                    <!-- <a class="btn-theme btn" href="#"><i class="fas fa-ticket-alt"></i>&nbsp;&nbsp;Buy Ticket</a> -->
-                    <a class="btn-theme btn" href="views/sign-in.php"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Se connecter</a>
+                    <?php if (isset($_SESSION['username'])):?>
+                        <a class="btn-primary btn" href="views/profile.php"><p><?= $_SESSION['username'] ?></p></a>
+                    <?php else: ?>
+                        <a class="btn-theme btn" href="views/sign-in.php"><i class="fas fa-sign-in-alt"></i>&nbsp;Se connecter</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </nav>
@@ -278,7 +281,7 @@
                 </ul>
             </div>
             <div class="col-sm-6 col-lg-3">
-                <style>#eapps-weather-5c367264-049a-40da-a992-94cb978eecf4 > div > div:nth-child(2){display: none;}</style>
+                <style>#eapps-weather-5c367264-049a-40da-a992-94cb978eecf4 > div > div:nth-child(2), body > footer > div.footer-body.container > div > div:nth-child(3) > div > div.eapps-widget-toolbar{display: none;}</style>
                 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                 <div class="elfsight-app-5c367264-049a-40da-a992-94cb978eecf4"></div>
             </div>

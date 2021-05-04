@@ -11,7 +11,6 @@ class Functions
     private $id;
 
     public function Errors(Utilisateur $user){
-        session_start();
 
         $_SESSION['errors'] = [];
 
@@ -23,7 +22,7 @@ class Functions
             array_push($_SESSION['errors'],"Votre nom n'est pas alphanumérique");
         }
 
-        if (empty($user->getMail() || !filter_var($user->getMail(), FILTER_VALIDATE_EMAIL))) {
+        if (empty($user->getEmail() || !filter_var($user->getEmail(), FILTER_VALIDATE_EMAIL))) {
             array_push($_SESSION['errors'],"Votre mail n'est pas valide");
         }
 
@@ -156,10 +155,11 @@ class Functions
     public function fetch_user(){
         $bdd = new bdd();
 
-        $req=$bdd->getStart()->prepare('SELECT * FROM user ');
+        $req=$bdd->getStart()->prepare('SELECT id,username,email,role FROM user ');
         $req->execute();
         $donne = $req->fetchAll();
-        $this->setReq($donne);
+
+        return $donne;
     }
 
     public function reservation(array $param){

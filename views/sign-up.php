@@ -40,7 +40,7 @@
                     <div class="row form-grid">
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="pseudo" type="text" placeholder="Pseudo" required>
+                                <input class="form-control" name="username" type="text" placeholder="Pseudo" required>
                             </div>
                         </div>
                         <div class="col-12">

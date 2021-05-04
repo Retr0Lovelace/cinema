@@ -3,13 +3,10 @@
 class Utilisateur
 {
     private $id;
-    private $nom;
-    private $prenom;
     private $username;
     private $password;
     private $repassword;
-    private $recherche;
-    private $mail;
+    private $email;
     private $role;
 
     public function __construct(array $donnees)
@@ -39,21 +36,6 @@ class Utilisateur
         return $this->id;
     }
 
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    public function getRecherche()
-    {
-        return $this->recherche;
-    }
-
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
     public function getUsername()
     {
         return $this->username;
@@ -69,9 +51,9 @@ class Utilisateur
         return $this->repassword;
     }
 
-    public function getMail()
+    public function getEmail()
     {
-        return $this->mail;
+        return $this->email;
     }
 
     public function getRole()
@@ -94,33 +76,6 @@ class Utilisateur
         {
             // Si c'est le cas, on affecte la valeur à l'attribut id.
             $this->id = $id;
-        }
-    }
-
-    public function setNom($nom)
-    {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        if (is_string($nom))
-        {
-            $this->nom = $nom;
-        }
-    }
-
-    public function setPrenom($prenom)
-    {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        if (is_string($prenom))
-        {
-            $this->prenom = $prenom;
-        }
-    }
-
-    public function setRecherche($recherche)
-    {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        if (is_string($recherche))
-        {
-            $this->recherche = $recherche;
         }
     }
     
@@ -152,14 +107,14 @@ class Utilisateur
         }
     }
 
-    public function setMail($mail)
+    public function setEmail($email)
     {
-        // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-        if (is_string($mail))
+        if (is_string($email))
         {
-            $this->mail = $mail;
+            $this->email = $email;
         }
     }
+
 
     public function setRole($role)
     {

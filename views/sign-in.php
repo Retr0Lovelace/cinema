@@ -33,7 +33,7 @@
                                     <ul>
                                         <?php for ($i=0;$i < count($_SESSION['errors']); $i++){ ?>
                                             <li><?= $_SESSION['errors'][$i] ?></li>
-                                        <?php }  ?>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>

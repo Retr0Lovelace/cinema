@@ -13,5 +13,3 @@ $user = new Utilisateur(array(
 
 $co = new manager();
 $co->Inscription($user);
-
-

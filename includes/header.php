@@ -51,8 +51,11 @@
                     <li class="nav-item"><a class="nav-link" href="about-us.php">A propos de nous</a></li>
                 </ul>
                 <div class="navbar-extra">
-                    <!-- <a class="btn-theme btn" href="#"><i class="fas fa-ticket-alt"></i>&nbsp;&nbsp;Buy Ticket</a> -->
+                    <?php if (isset($_SESSION['username'])):?>
+                    <a class="btn-primary btn" href="profile.php"><p><?= $_SESSION['username'] ?></p></a>
+                    <?php else: ?>
                     <a class="btn-theme btn" href="sign-in.php"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Se connecter</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </nav>

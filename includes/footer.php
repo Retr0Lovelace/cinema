@@ -18,10 +18,10 @@
                     <li><a class="content-link" href="movies-list.php">All Movies</a></li>
                 </ul>
             </div>
-            <div class="col-sm-6 col-lg-3">
-                <style>#eapps-weather-5c367264-049a-40da-a992-94cb978eecf4 > div > div:nth-child(2){display: none;}</style>
-                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                 <div class="elfsight-app-5c367264-049a-40da-a992-94cb978eecf4"></div>
+                <div class="col-sm-6 col-lg-3">
+                    <style>#eapps-weather-5c367264-049a-40da-a992-94cb978eecf4 > div > div:nth-child(2), body > footer > div.footer-body.container > div > div:nth-child(3) > div > div.eapps-widget-toolbar{display: none;}</style>
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
             </div>
         </div>
     </div>
