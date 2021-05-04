@@ -1,10 +1,11 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Memico - Cinema Bootstrap HTML5 Template</title>
+    <title>SPC - Cinema</title>
     <link href="../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../assets/vendor/bootstrap/css/tempusdominus-bootstrap-4.scss" rel="stylesheet" type="text/css">
     <link href="../assets/animate.css" rel="stylesheet" type="text/css">
@@ -21,9 +22,21 @@
     <div class="d-background bg-gradient-black"></div>
     <div class="top-block">
         <div class="top-block-content m-auto">
-            <div class="system-form">
+            <div class="system-form" style="max-width: 387px;">
                 <h4 class="form-title text-uppercase">S'inscrire</h4>
                 <form autocomplete="off" method="post" action="../traitement/traitement_register.php">
+                    <?php if (isset($_SESSION['errors'])){ ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                <p>Un probleme est intervenue :</p>
+                                <ul>
+                                    <?php for ($i=0;$i < count($_SESSION['errors']); $i++){ ?>
+                                        <li><?= $_SESSION['errors'][$i] ?></li>
+                                    <?php }  ?>
+                                </ul>
+                            </div>
+                        </div>
+                    <?php } unset($_SESSION['errors']); ?>
                     <div class="row form-grid">
                         <div class="col-12">
                             <div class="input-view-flat input-group">

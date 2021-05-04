@@ -13,28 +13,28 @@ class Functions
     public function Errors(Utilisateur $user){
         session_start();
 
+        $_SESSION['errors'] = [];
+
         if (!empty($this->getDonne())) {
-            $_SESSION['errors'][0] = "Votre Username/Mail est déjà utilisé";
-        }
-
-        if (empty($user->getNom()) || !preg_match('/^[a-zA-Z0-9_]+$/', $user->getNom())) {
-            $_SESSION['errors'][1] = "Votre nom n'est pas alphanumérique";
-        }
-
-        if (empty($user->getPrenom()) || !preg_match('/^[a-zA-Z0-9_]+$/', $user->getPrenom())) {
-            $_SESSION['errors'][2] = "Votre prenom n'est pas alphanumérique";
+            array_push($_SESSION['errors'],"Votre Username/Mail est déjà utilisé");
         }
 
         if (empty($user->getUsername()) || !preg_match('/^[a-zA-Z0-9_]+$/', $user->getUsername())) {
-            $_SESSION['errors'][3] = "Votre pseudo n'est pas alphanumérique";
+            array_push($_SESSION['errors'],"Votre nom n'est pas alphanumérique");
         }
 
         if (empty($user->getMail() || !filter_var($user->getMail(), FILTER_VALIDATE_EMAIL))) {
-            $_SESSION['errors'][4] = "Votre mail n'est pas valide";
+            array_push($_SESSION['errors'],"Votre mail n'est pas valide");
         }
 
-        if (empty($user->getPassword()) || $user->getPassword() != $user->getRepassword()) {
-            $_SESSION['errors'][5] = "Votre mot de passe n'est pas valide";
+        if ($user->getRepassword() != null){
+            if (empty($user->getPassword()) || $user->getPassword() != $user->getRepassword()) {
+                array_push($_SESSION['errors'],"Votre mot de passe n'est pas valide");
+            }
+        }
+
+        if (empty($_SESSION['errors'])){
+            unset($_SESSION['errors']);
         }
     }
 
@@ -129,7 +129,7 @@ class Functions
     public function fetch_user(){
         $bdd = new bdd();
 
-        $req=$bdd->getStart()->prepare('SELECT * FROM users ');
+        $req=$bdd->getStart()->prepare('SELECT * FROM user ');
         $req->execute();
         $donne = $req->fetchAll();
         $this->setReq($donne);

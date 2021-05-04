@@ -22,43 +22,46 @@
     <div class="d-background bg-gradient-black"></div>
     <div class="top-block">
         <div class="top-block-content m-auto">
-            <div class="system-form" style="max-width: 420px;">
-                <h4 class="form-title text-uppercase">Se connecter</h4>
+            <div class="system-form" style="max-width: 450px;">
+                <h4 class="form-title text-uppercase">Mot de passe oublie</h4>
                 <form autocomplete="off" method="post" action="../traitement/traitement_login.php">
                     <div class="row form-grid">
-                        <?php if (isset($_SESSION['errors'])){ ?>
-                            <div class="col-12">
+                        <div class="col-12">
+                            <?php if (isset($_SESSION['Errors'])){ ?>
                                 <div class="alert alert-danger mb-0" role="alert">
                                     <p>Un probleme est intervenue :</p>
                                     <ul>
-                                        <?php for ($i=0;$i < count($_SESSION['errors']); $i++){ ?>
-                                            <li><?= $_SESSION['errors'][$i] ?></li>
+                                        <?php for ($i=0;$i < count($_SESSION['Errors']); $i++){ ?>
+                                            <li><?= $_SESSION['Errors'][$i] ?></li>
                                         <?php }  ?>
                                     </ul>
                                 </div>
-                            </div>
-                        <?php } unset($_SESSION['errors']); ?>
-                        <div class="col-12">
-                            <div class="input-view-flat input-group">
-                                <input class="form-control" name="username" type="text" placeholder="Pseudo" required>
-                            </div>
+                            <?php unset($_SESSION['Errors']); } ?>
+
+                            <?php if (isset($_SESSION['Errors'])){ ?>
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <p>Un probleme est intervenue :</p>
+                                    <ul>
+                                        <?php for ($i=0;$i < count($_SESSION['Errors']); $i++){ ?>
+                                            <li><?= $_SESSION['Errors'][$i] ?></li>
+                                        <?php }  ?>
+                                    </ul>
+                                </div>
+                            <?php unset($_SESSION['Errors']); } ?>
                         </div>
                         <div class="col-12">
                             <div class="input-view-flat input-group">
-                                <input class="form-control" name="password" type="password" placeholder="Mot de passe" required>
+                                <input class="form-control" name="username" type="text" placeholder="Mail" required>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="w-100 btn btn-theme" type="submit">Se connecter</button>
+                            <button class="w-100 btn btn-theme" type="submit">Reinitialiser le mot de passe</button>
                         </div>
                     </div>
                 </form>
                 <p class="form-subtext">
-                    <a href="forgot-password.php">Mot de passe oublie?</a>
-                </p>
-                <p class="form-subtext">
-                    Vous n'avez pas de compte?
-                    <a href="sign-up.php">S'inscrire</a>
+                    Vous avez déjà un compte?
+                    <a href="sign-in.php">Se connecter</a>
                 </p>
             </div>
         </div>

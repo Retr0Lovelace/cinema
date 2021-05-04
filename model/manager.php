@@ -10,11 +10,11 @@ require_once 'Functions.php';
 class manager
 {
 
-    public function Connexion(Utilisateur $user){ // Fonction de connexion d'un utilisateur présent dans login.php
+    public function Connexion(Utilisateur $user){ // Fonction de connexion d'un utilisateur présent dans sign-in.php
 
         $bdd = new bdd();
 
-        $req=$bdd->getStart()->prepare('SELECT * FROM users WHERE username = :username'); // Requête qui récupèrent toutes les informations en rapport avec le username seulement
+        $req=$bdd->getStart()->prepare('SELECT * FROM user WHERE username = :username'); // Requête qui récupèrent toutes les informations en rapport avec le username seulement
         $req->execute(array(
             'username' => $user->getUsername()
         ));
@@ -26,7 +26,7 @@ class manager
         if (!$resultat)
         {
             $_SESSION['errors'][0] = "Utilisateur n'existe pas"; // gestion d'erreur
-            header("Location: ../views/login.php");
+            header("Location: ../views/sign-in.php");
         }
         else
         {
@@ -39,27 +39,27 @@ class manager
                     header("Location: ../admin.php ");
                 }
                 elseif($resultat['role'] == 2){
-                    header("Location: ../index.php ");
+                    header("Location: ../");
                 }
             }
             else {
                 $_SESSION['errors'][1] = "Mauvais identifiant ou mot de passe !";  // gestion d'erreur
-                header("Location: ../views/login.php");
+                header("Location: ../views/sign-in.php");
             }
         }
     }
 
-    public function Inscription(Utilisateur $user){ // Fonction d'inscription d'un utilisateur présent dans register.php
+    public function Inscription(Utilisateur $user){ // Fonction d'inscription d'un utilisateur présent dans sign-up.php
 
         session_start();
 
         $bdd = new bdd();
         $Functions = new Functions();
 
-        $req=$bdd->getStart()->prepare('SELECT * FROM users WHERE username = :username OR mail = :mail'); // Requête qui récupèrent toutes les informations pour voir si l'utilisateur n'existe ou non
+        $req=$bdd->getStart()->prepare('SELECT * FROM user WHERE username = :username OR email = :email'); // Requête qui récupèrent toutes les informations pour voir si l'utilisateur n'existe ou non
         $req->execute(array(
             'username'=>$user->getUsername(),
-            'mail'=>$user->getMail()
+            'email'=>$user->getMail()
         ));
 
         $donne = $req->fetch();
@@ -71,7 +71,7 @@ class manager
         $Functions->Errors($user); // gestion d'erreur
 
         if (empty($_SESSION['errors'])){
-            $req1=$bdd->getStart()->prepare('INSERT INTO users (username, nom, prenom, password, mail, role) VALUES (:username, :nom, :prenom, :password, :mail, :role)'); // Création de l'utilisateur dans la bdd
+            $req1=$bdd->getStart()->prepare('INSERT INTO user (username, nom, prenom, password, email, role) VALUES (:username, :nom, :prenom, :password, :email, :role)'); // Création de l'utilisateur dans la bdd
 
             $pass_hache = password_hash($user->getPassword(), PASSWORD_DEFAULT);
 
@@ -80,7 +80,7 @@ class manager
                 'nom'=>$user->getNom(),
                 'prenom'=>$user->getPrenom(),
                 'password'=> $pass_hache,
-                'mail'=>$user->getMail(),
+                'email'=>$user->getMail(),
                 'role'=>(int)$user->getRole()
             ));
 
@@ -89,11 +89,11 @@ class manager
             $_SESSION['username'] = $user->getUsername(); //création d'un Session
             $_SESSION['role'] = $user->getRole();
 
-            header("Location: ../index.php");
+            header("Location: ../");
 
         }
         else{
-            header("Location: ../views/register.php");
+            header("Location: ../views/sign-up.php");
         }
 
     }
@@ -111,14 +111,14 @@ class manager
 
             $pass_hache = password_hash($user->getPassword(), PASSWORD_DEFAULT); // hachage du mot du nouveau mot de passe
 
-            $req=$bdd->getStart()->prepare('UPDATE users SET username = :username, nom = :nom, prenom=:prenom, password =:password, mail = :mail, role = :role WHERE id = :id');
+            $req=$bdd->getStart()->prepare('UPDATE user SET username = :username, nom = :nom, prenom=:prenom, password =:password, email = :email, role = :role WHERE id = :id');
             $req->execute(array(
                 'id' => $_SESSION['id'],
                 'username'=>$user->getUsername(),
                 'nom'=>$user->getNom(),
                 'prenom'=>$user->getPrenom(),
                 'password'=> $pass_hache,
-                'mail'=>$user->getMail(),
+                'email'=>$user->getMail(),
                 'role'=>(int)$_SESSION['role']
             ));
         }
@@ -130,7 +130,7 @@ class manager
 
         $id = (int)$id;
 
-        $req = $bdd->getStart()->prepare("DELETE FROM users WHERE id= :id");
+        $req = $bdd->getStart()->prepare("DELETE FROM user WHERE id= :id");
         $req->execute(array(
             'id'=> $id
         ));

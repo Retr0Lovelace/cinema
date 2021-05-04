@@ -1,9 +1,10 @@
 <?php require 'model/Functions.php'; ?>
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;"/>
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>SPC - Cinema</title>
@@ -62,6 +63,18 @@
     <div class="d-background" data-image-src="http://via.placeholder.com/1920x1080" data-parallax="scroll"></div>
     <div class="d-background bg-theme-blacked"></div>
     <div class="mt-auto container position-relative">
+        <?php if (isset($_SESSION['errors'])){ ?>
+        <div class="pt-5">
+            <div class="alert alert-danger mb-0" role="alert">
+                <p>Un probleme est intervenue :</p>
+                <ul>
+                    <?php for ($i=0;$i < count($_SESSION['errors']); $i++){ ?>
+                    <li><?= $_SESSION['errors'][$i] ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+        <?php } unset($_SESSION['errors']); ?>
         <div class="top-block-head text-uppercase">
             <h2 class="display-4">Actuellement<span class="text-theme"> Chez Nous</span></h2>
         </div>
@@ -147,11 +160,8 @@
             }
             for ($i=0;$i< count($data1);$i++){
                 $data1[$i]['api_id'] = (int)$data1[$i]['api_id'];
+                $result = array_intersect($data1[$i],$data_id);
             }
-            var_dump($data1);
-            var_dump($data_id);
-            $result = array_intersect($data_id);
-            var_dump($result);
         ?>
         <article class="movie-line-entity">
             <div class="entity-poster" data-role="hover-wrap">
@@ -728,6 +738,11 @@
                 <ul class="list-unstyled list-wide footer-content">
                     <li><a class="content-link" href="views/movies-list.php">All Movies</a></li>
                 </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <style>#eapps-weather-5c367264-049a-40da-a992-94cb978eecf4 > div > div:nth-child(2){display: none;}</style>
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-5c367264-049a-40da-a992-94cb978eecf4"></div>
             </div>
         </div>
     </div>

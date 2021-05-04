@@ -2,7 +2,9 @@
 <?php require '../model/Functions.php'; ?>
 <?php
 if (!isset($_GET['id'])){
-    header('location: 404.php');
+    $_SESSION['errors'] = [];
+    array_push($_SESSION['errors'],'Le Film est introuvable');
+    header('location: ../');
 }
 ?>
         <section class="after-head d-flex section-text-white position-relative">
