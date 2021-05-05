@@ -62,6 +62,7 @@
                             <button class="w-100 btn btn-theme" type="submit">S'inscrire</button>
                         </div>
                     </div>
+                    <div class="g-recaptcha" style="margin-top: 30px;display: flex;justify-content: center;" data-sitekey="6Ld89poaAAAAAGc4K2zWINBoz3T7nhpBUG7WTUL1"></div>
                 </form>
                 <p class="form-subtext">
                     Vous n'avez deja un compte?
@@ -71,5 +72,5 @@
         </div>
     </div>
 </section>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <?php include '../includes/footer.php';?>

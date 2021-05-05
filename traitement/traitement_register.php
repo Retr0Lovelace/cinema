@@ -8,6 +8,7 @@ $user = new Utilisateur(array(
     'email' => $_POST['email'],
     'password' => $_POST['password'],
     'repassword' => $_POST['repassword'],
+    'recaptcha' => $_POST['g-recaptcha-response'],
     'role' => 2
 ));
 

@@ -11,8 +11,14 @@ class Functions
     private $id;
 
     public function Errors(Utilisateur $user){
+        require_once '../assets/vendor/autoload.php';
+        $recaptcha = new ReCaptcha\ReCaptcha('6Ld89poaAAAAAJgbij9p8iwydlzHLnYZ7onz6Hsz');
 
         $_SESSION['errors'] = [];
+
+        if ($user->getRecaptcha() == ''){
+            array_push($_SESSION['errors'],"Captcha non rempli");
+        }
 
         if (!empty($this->getDonne())) {
             array_push($_SESSION['errors'],"Votre Username/Mail est déjà utilisé");
@@ -162,6 +168,66 @@ class Functions
         return $donne;
     }
 
+    public function SearchFilm(String $search)
+    { // Fonction qui permet à l'utilsateur de modifier ses informations présent dans espace-membre.php
+
+        session_start();
+        $data = [];
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.themoviedb.org/3/search/tv?api_key=cca3a19cf7481e51aad8193c7ca64cc0&language=fr-FR&page=1&query='.$search,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+        $response = json_decode(curl_exec($curl), true);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            var_dump($response);
+            die();
+        }
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            array_push($data, $response);
+        }
+        $this->setReq($data);
+        header("Location: ../views/NewFilm.php");
+    }
+    public function PermAdmin(int $id){
+
+        $bdd = new bdd();
+
+        $req3=$bdd->getStart()->prepare('UPDATE user SET role=:role WHERE id = :id');
+        $req3->execute(array(
+            'id' => $id,
+            'role' => 1
+        ));
+
+        header('location: ../views/admin.php');
+    }
+    public function unAdmin(int $id){
+
+        $bdd = new bdd();
+
+        $req3=$bdd->getStart()->prepare('UPDATE user SET role=:role WHERE id = :id');
+        $req3->execute(array(
+            'id' => $id,
+            'role' => 2
+        ));
+
+        header('location: ../views/admin.php');
+    }
     public function reservation(array $param){
         $bdd = new bdd();
 

@@ -43,7 +43,7 @@
         </li>
         <hr class="sidebar-divider d-none d-md-block">
         <li class="nav-item">
-            <a class="nav-link" href="../index.php">
+            <a class="nav-link" href="NewFilm.php">
                 <i class="fas fa-wrench"></i>
                 <span>Ajout Film</span>
             </a>

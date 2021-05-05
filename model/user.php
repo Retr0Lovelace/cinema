@@ -6,6 +6,7 @@ class Utilisateur
     private $username;
     private $password;
     private $repassword;
+    private $recaptcha;
     private $email;
     private $role;
 
@@ -34,6 +35,11 @@ class Utilisateur
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getRecaptcha()
+    {
+        return $this->recaptcha;
     }
 
     public function getUsername()
@@ -112,6 +118,14 @@ class Utilisateur
         if (is_string($email))
         {
             $this->email = $email;
+        }
+    }
+
+    public function setRecaptcha($recaptcha)
+    {
+        if (is_string($recaptcha))
+        {
+            $this->recaptcha = $recaptcha;
         }
     }
 

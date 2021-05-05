@@ -47,12 +47,21 @@
                                     <td><?=$a[$i]['email'] ?></td>
                                     <td><?=$a[$i]['role'] ?></td>
                                     <td style="display: flex; padding-left: 10px;">
-                                    <form action="../traitement/traitement_suppression.php" method="post" id="form">
-                                        <input name="id" hidden value="<?= $a[$i]['id'] ?>">
-                                        <button document.getElementById("form").submit();">
-                                            <i class="far fa-trash-alt"></i>
-                                        </button>
-                                    </form>
+                                        <a href="../traitement/traitement_suppression.php?id=<?php echo $a[$i]['id']; ?>" class="btn btn-danger btn-icon-split">
+                                            <span class="icon text-white-50"><i class="fas fa-trash"></i></span>
+                                            <span class="text">Supprimer l'utilisateur</span>
+                                        </a>
+                                        <?php if ($a[$i]['role'] != 'admin'){ ?>
+                                            <a href="../traitement/traitement_admin.php?id=<?php echo $a[$i]['id']; ?>" class="btn btn-info btn-icon-split mx-2">
+                                                <span class="icon text-white-50"><i class="fas fa-user-cog"></i></span>
+                                                <span class="text">Permission Administrateur</span>
+                                            </a>
+                                        <?php } else{ ?>
+                                            <a href="../traitement/traitement_unadmin.php?id=<?php echo $a[$i]['id']; ?>" class="btn btn-info btn-icon-split mx-2">
+                                                <span class="icon text-white-50"><i class="fas fa-user-cog"></i></span>
+                                                <span class="text">Enlever Permission Administrateur</span>
+                                            </a>
+                                        <?php } ?>
                                     </td>
                                     </tr>
                                 <?php endfor; ?>

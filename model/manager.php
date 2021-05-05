@@ -13,6 +13,7 @@ class manager
     public function Connexion(Utilisateur $user){ // Fonction de connexion d'un utilisateur présent dans sign-in.php
         session_start();
         $bdd = new bdd();
+        $Functions = new Functions();
 
         $req=$bdd->getStart()->prepare('SELECT * FROM user WHERE username = :username'); // Requête qui récupèrent toutes les informations en rapport avec le username seulement
         $req->execute(array(
@@ -20,6 +21,9 @@ class manager
         ));
 
         $resultat = $req->fetch();
+
+        $Functions->Errors($user);
+
         $isPasswordCorrect = password_verify($user->getPassword(), $resultat['password']); // test de la compatibilité du mot de passe et du mot de passe crypté
 
         if (!$resultat)
@@ -29,12 +33,12 @@ class manager
         }
         else
         {
-            if ($isPasswordCorrect) {
+            if ($isPasswordCorrect && empty($_SESSION['errors'])) {
                 $_SESSION['id'] = $resultat['id'];   //création de la session utilisateur
                 $_SESSION['username'] = $resultat['username'];
                 $_SESSION['role'] = $resultat['role'];
                 if($resultat['role'] == 1){ //redirection si c'est un admin
-                    header("Location: ../admin.php ");
+                    header("Location: ../views/admin.php ");
                 }
                 elseif($resultat['role'] == 2){
                     header("Location: ../");
@@ -116,7 +120,6 @@ class manager
             $Functions->Errors($user); // Gestion d'erreur
         }
         else{
-
             $pass_hache = password_hash($user->getPassword(), PASSWORD_DEFAULT); // hachage du mot du nouveau mot de passe
 
             $req=$bdd->getStart()->prepare('UPDATE user SET username = :username, nom = :nom, prenom=:prenom, password =:password, email = :email, role = :role WHERE id = :id');

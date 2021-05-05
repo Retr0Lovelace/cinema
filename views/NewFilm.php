@@ -7,67 +7,23 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Utilisateurs</h1>
-    <p class="mb-4">Dans cette section, vous trouverez les utilisateurs présent dans votre base de donnée.</p>
+    <h1 class="h3 mb-2 text-gray-800">Ajout Film</h1>
+    <p class="mb-4">Dans cette section, vous trouverez tout les film a ajouter.</p>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Utilisateurs</h6>
+            <form action="../traitement/traitement_searchFilm.php" method="post">
+                <input type="text" name="search" placeholder="Nom Film (ex.: Fast & Furious, Avengers, etc..)">
+                <input type="submit" value="Envoyer">
+            </form>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
-                <?php
-                $function = new Functions();
-                $a = $function->fetch_user();
-                ?>
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Username</th>
-                        <th>Mail</th>
-                        <th>Rôle</th>
-                        <th>Modification</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    $count_1 = count($a);
-                    for ($i=0;$i<$count_1;$i++):
+            <?php
+            $fonction = new Functions();
+            $data = $fonction->getReq();
+            var_dump($data);
+            ?>
 
-                        if ($a[$i]['role'] == 1){
-                            $a[$i]['role'] = "admin";
-                        }
-                        elseif ($a[$i]['role'] == 2){
-                            $a[$i]['role'] = "user";
-                        }?>
-                        <tr>
-                            <td><?= $a[$i]['id'] ?></td>
-                            <td><?=$a[$i]['username'] ?></td>
-                            <td><?=$a[$i]['email'] ?></td>
-                            <td><?=$a[$i]['role'] ?></td>
-                            <td style="display: flex; padding-left: 10px;">
-                                <form action="../traitement/traitement_suppression.php" method="post" id="form">
-                                    <input name="id" hidden value="<?= $a[$i]['id'] ?>">
-                                    <button document.getElementById("form").submit();">
-                                    <i class="far fa-trash-alt"></i>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    <?php endfor; ?>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <th>Id</th>
-                        <th>Pseudo</th>
-                        <th>Mail</th>
-                        <th>Rôle</th>
-                        <th>Modification</th>
-                    </tr>
-                    </tfoot>
-                </table>
-            </div>
         </div>
     </div>
 </div>

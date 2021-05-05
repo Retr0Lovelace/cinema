@@ -96,7 +96,7 @@
                             <div class="d-background bg-theme-lighted collapse animated faster" data-show-class="fadeIn show" data-hide-class="fadeOut show"></div>
                             <div class="d-over bg-highlight-bottom">
                                 <div class="collapse animated faster entity-play" data-show-class="fadeIn show" data-hide-class="fadeOut show">
-                                    <a class="action-icon-theme action-icon-bordered rounded-circle" href="https://www.youtube.com/watch?v=d96cjJhvlMA" data-magnific-popup="iframe">
+                                    <a class="action-icon-theme action-icon-bordered rounded-circle" href="views/article-sidebar-right.php?id=<?= $i ?>">
                                         <span class="icon-content"><i class="fas fa-play"></i></span>
                                     </a>
                                 </div>
@@ -147,7 +147,7 @@
 <section class="section-long">
     <div class="container">
         <div class="section-head">
-            <h2 class="section-title text-uppercase">Now in play</h2>
+            <h2 class="section-title text-uppercase">En Salle</h2>
             <p class="section-text">
                 Dates: <?php $t=time();
                 echo(date("Y-m-d",$t)); ?>
@@ -162,13 +162,6 @@
             <div class="entity-poster" data-role="hover-wrap">
                 <div class="embed-responsive embed-responsive-poster">
                     <img class="embed-responsive-item" src="<?= 'https://image.tmdb.org/t/p/w500'.$data1[$i]['poster_path'] ?>" alt="" />
-                </div>
-                <div class="d-over bg-theme-lighted collapse animated faster" data-show-class="fadeIn show" data-hide-class="fadeOut show">
-                    <div class="entity-play">
-                        <a class="action-icon-theme action-icon-bordered rounded-circle" href="https://www.youtube.com/watch?v=d96cjJhvlMA" data-magnific-popup="iframe">
-                            <span class="icon-content"><i class="fas fa-play"></i></span>
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="entity-content">
@@ -195,29 +188,7 @@
             </div>
             <div class="entity-extra">
                 <div class="text-uppercase entity-extra-title">
-                    Showtime
-                </div>
-                <div class="entity-showtime">
-                    <div class="showtime-wrap">
-                        <div class="showtime-item">
-                            <span class="disabled btn-time btn" aria-disabled="true">11 : 30</span>
-                        </div>
-                        <div class="showtime-item">
-                            <a class="btn-time btn" aria-disabled="false" href="#">13 : 25</a>
-                        </div>
-                        <div class="showtime-item">
-                            <a class="btn-time btn" aria-disabled="false" href="#">16 : 07</a>
-                        </div>
-                        <div class="showtime-item">
-                            <a class="btn-time btn" aria-disabled="false" href="#">19 : 45</a>
-                        </div>
-                        <div class="showtime-item">
-                            <a class="btn-time btn" aria-disabled="false" href="#">21 : 30</a>
-                        </div>
-                        <div class="showtime-item">
-                            <a class="btn-time btn" aria-disabled="false" href="#">23 : 10</a>
-                        </div>
-                    </div>
+                    En Cours de diffusion
                 </div>
             </div>
         </article>

@@ -60,6 +60,14 @@ if (!isset($_GET['id'])){
                                             <a class="content-link" href="#"><?= $data[$_GET['id']]['genres'][1]['name'] ?></a>
                                         </div>
                                     </div>
+                                    <div>
+                                        <?php if (isset($_SESSION['username'])):?>
+                                            <a class="btn-primary btn" href="payement.php">Reserver</a>
+                                        <?php else: ?>
+                                            <style>.disabled {pointer-events: none;cursor: default;}</style>
+                                            <a class="btn-primary btn disabled" href="payement.php">Reserver</a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

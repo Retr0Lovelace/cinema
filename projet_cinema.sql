@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 04 mai 2021 à 17:49
+-- Généré le : mer. 05 mai 2021 à 01:20
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.4.9
 
@@ -92,13 +92,21 @@ INSERT INTO `salle` (`id`, `api_id`, `capacité`, `h_entree`, `h_sorti`) VALUES
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `id_user` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(16) COLLATE utf8_bin NOT NULL,
-  `email` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `password` varchar(32) COLLATE utf8_bin NOT NULL,
-  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `password` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `role` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `role`) VALUES
+(0, 'aze', 'aze@mail.fr', '$2y$10$ql2yiQpXErzABt7EVS6pLOLrScTh6t0vSQ9fOZrbdSNf1lKBDZRKK', 1),
+(6, 'az', 'az@az.az', '$2y$10$JiX0VxXbOKMWPY7nLFtyluGprwy/nbrsiggruVQgLuzIPWjBeTw9O', 2);
 
 --
 -- Contraintes pour les tables déchargées
