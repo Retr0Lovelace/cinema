@@ -1,3 +1,5 @@
+<?php require_once '../model/Functions.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,29 +15,33 @@
     <div class="box order_box">
         <div class="head">Details de la commande</div>
         <div class="body">
+            <?php
+            $function = new Functions();
+            $total = $function->getTarifNavigo() + $function->getPleinTarif() +$function->getTarifEtudiant() + $function->getMoinsdix();
+            ?>
             <ul class="order_list">
                 <li>
                     <div class="prod_info">
-                        <div class="name">Plein Tarif: x1</div>
+                        <div class="name">Plein Tarif:</div>
+                        <div class="price"><?= $function->getPleinTarif(); ?></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod_info">
+                        <div class="name">Tarif Etudiant:</div>
+                        <div class="price"><?= $function->getTarifEtudiant(); ?></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="prod_info">
+                        <div class="name">Moins 10 ans:</div>
                         <div class="price">$110</div>
                     </div>
                 </li>
                 <li>
                     <div class="prod_info">
-                        <div class="name">Tarif Etudiant: x1</div>
-                        <div class="price">$110</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod_info">
-                        <div class="name">Moins 10 ans: x1</div>
-                        <div class="price">$110</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="prod_info">
-                        <div class="name">Tarif Navigo: x1</div>
-                        <div class="price">$110</div>
+                        <div class="name">Tarif Navigo:</div>
+                        <div class="price"><?= $function->getTarifNavigo(); ?></div>
                     </div>
                 </li>
             </ul>
@@ -43,7 +49,7 @@
         <div class="foot">
             <dl class="total_price">
                 <dt>Total</dt>
-                <dd>$550</dd>
+                <dd><?= $total ?></dd>
             </dl>
         </div>
     </div>

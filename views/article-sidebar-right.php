@@ -62,11 +62,23 @@ if (!isset($_GET['id'])){
                                     </div>
                                     <div>
                                         <?php if (isset($_SESSION['username'])):?>
-                                            <a class="btn-primary btn" href="payement.php">Reserver</a>
+                                            <form method="post" action="../traitement/traitement_payement.php">
+                                                <label for="Plein-tarif">Plein Tarif:</label>
+                                                <input type="number" id="Plein-tarif" name="Plein-tarif" value="0">
+                                                <label for="Tarif-Etudiant">Tarif Etudiant:</label>
+                                                <input type="number" id="Tarif-Etudiant" name="Tarif-Etudiant" value="0">
+                                                <label for="Moinsdix">Moins 10 ans:</label>
+                                                <input type="number" id="Moinsdix" name="Moinsdix" value="0">
+                                                <label for="Tarif-Navigo">Tarif Navigo:</label>
+                                                <input type="number" id="Tarif-Navigo" name="Tarif-Navigo" value="0">
+                                                <input type="submit" class="btn-primary btn" value="Reserver">
+                                            </form>
                                         <?php else: ?>
                                             <style>.disabled {pointer-events: none;cursor: default;}</style>
                                             <a class="btn-primary btn disabled" href="payement.php">Reserver</a>
                                         <?php endif; ?>
+                                    </div>
+                                    <div>
                                     </div>
                                 </div>
                             </div>

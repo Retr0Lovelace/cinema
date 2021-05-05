@@ -114,22 +114,21 @@ class manager
 
         $bdd = new bdd();
         session_start();
+        $Functions = new Functions();
+        $Functions->Errors($user);
 
-        if ($user->getPassword() != $user->getRepassword()){
-            $Functions = new Functions();
-            $Functions->Errors($user); // Gestion d'erreur
-        }
-        else{
+        if (empty($_SESSION['errors'])){
             $pass_hache = password_hash($user->getPassword(), PASSWORD_DEFAULT); // hachage du mot du nouveau mot de passe
 
-            $req=$bdd->getStart()->prepare('UPDATE user SET username = :username, nom = :nom, prenom=:prenom, password =:password, email = :email, role = :role WHERE id = :id');
+            $req=$bdd->getStart()->prepare('UPDATE user SET username = :username, password =:password, email = :email WHERE username = :user');
             $req->execute(array(
-                'id' => $_SESSION['id'],
+                'user' => $_SESSION['username'],
                 'username'=>$user->getUsername(),
                 'password'=> $pass_hache,
-                'email'=>$user->getEmail(),
-                'role'=>(int)$_SESSION['role']
+                'email'=>$user->getEmail()
             ));
+            $_SESSION['username'] = $user->getUsername();
+            header("Location: ../views/profile.php");
         }
     }
 

@@ -1,21 +1,21 @@
 <?php session_start(); ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>SPC - Cinema</title>
-    <link href="../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../assets/vendor/bootstrap/css/tempusdominus-bootstrap-4.scss" rel="stylesheet" type="text/css">
-    <link href="../assets/animate.css" rel="stylesheet" type="text/css">
-    <link href="../assets/vendor/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link href="../assets/vendor/slick/slick.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
-    <link href="../assets/css/theme.min.css" rel="stylesheet" type="text/css">
-</head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <title>SPC - Cinema</title>
+        <link href="../assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="../assets/vendor/bootstrap/css/tempusdominus-bootstrap-4.scss" rel="stylesheet" type="text/css">
+        <link href="../assets/animate.css" rel="stylesheet" type="text/css">
+        <link href="../assets/vendor/fontawesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+        <link href="../assets/vendor/slick/slick.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+        <link href="../assets/css/theme.min.css" rel="stylesheet" type="text/css">
+    </head>
 <body class="body">
 <section class="d-flex section-text-white position-relative">
     <img class="d-background" src="../assets/images/bg-login.jpg" data-parallax="scroll">
@@ -23,8 +23,8 @@
     <div class="top-block">
         <div class="top-block-content m-auto">
             <div class="system-form" style="max-width: 387px;">
-                <h4 class="form-title text-uppercase">S'inscrire</h4>
-                <form autocomplete="off" method="post" action="../traitement/traitement_register.php">
+                <h4 class="form-title text-uppercase">Modifier</h4>
+                <form autocomplete="off" method="post" action="../traitement/traitement_modification.php">
                     <?php if (isset($_SESSION['errors'])){ ?>
                         <div class="col-12">
                             <div class="alert alert-danger" role="alert">
@@ -62,14 +62,10 @@
                             <div class="g-recaptcha" style="margin-top: 30px;display: flex;justify-content: center;" data-sitekey="6Ld89poaAAAAAGc4K2zWINBoz3T7nhpBUG7WTUL1"></div>
                         </div>
                         <div class="col-12">
-                            <button class="w-100 btn btn-theme" type="submit">S'inscrire</button>
+                            <button class="w-100 btn btn-theme" type="submit">Modifier</button>
                         </div>
                     </div>
                 </form>
-                <p class="form-subtext">
-                    Vous n'avez deja un compte?
-                    <a href="sign-in.php">Se connecter</a>
-                </p>
             </div>
         </div>
     </div>

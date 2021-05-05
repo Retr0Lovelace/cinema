@@ -14,6 +14,7 @@ $data = $function->fetch_user_info();
                             <img src="../assets/images/avatar-default.jpg" alt="Admin" class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <h4 class="mb-3"><?= $_SESSION['username'] ?></h4>
+                                <a href="modify.php"><button class="btn btn-info">Modification</button></a>
                                 <a href="../traitement/leave.php"><button class="btn btn-danger">Deconnexion</button></a>
                             </div>
                         </div>

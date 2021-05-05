@@ -9,6 +9,10 @@ class Functions
     private $donne;
     private $req;
     private $id;
+    private $Plein_tarif;
+    private $Tarif_Etudiant;
+    private $Moinsdix;
+    private $Tarif_Navigo;
 
     public function Errors(Utilisateur $user){
         require_once '../assets/vendor/autoload.php';
@@ -53,6 +57,46 @@ class Functions
         return $this->donne;
     }
 
+    public function getMoinsdix()
+    {
+        return $this->Moinsdix;
+    }
+
+    public function getPleinTarif()
+    {
+        return $this->Plein_tarif;
+    }
+
+    public function getTarifEtudiant()
+    {
+        return $this->Tarif_Etudiant;
+    }
+
+    public function getTarifNavigo()
+    {
+        return $this->Tarif_Navigo;
+    }
+
+    public function setTarifNavigo($Tarif_Navigo)
+    {
+        $this->Tarif_Navigo = $Tarif_Navigo;
+    }
+
+    public function setMoinsdix($Moinsdix)
+    {
+        $this->Moinsdix = $Moinsdix;
+    }
+
+    public function setPleinTarif($Plein_tarif)
+    {
+        $this->Plein_tarif = $Plein_tarif;
+    }
+
+    public function setTarifEtudiant($Tarif_Etudiant)
+    {
+        $this->Tarif_Etudiant = $Tarif_Etudiant;
+    }
+
     public function setRecherche($recherche)
     {
         $this->recherche = $recherche;
@@ -81,6 +125,17 @@ class Functions
     public function getId()
     {
         return $this->id;
+    }
+    public function Payement($Plein_tarif,$Tarif_Etudiant,$Moinsdix,$Tarif_Navigo){
+        $Plein_tarif = $Plein_tarif * 13;
+        $Tarif_Etudiant = $Tarif_Etudiant * 7.5;
+        $Moinsdix = $Moinsdix * 5.5;
+        $Tarif_Navigo = $Tarif_Navigo * 9.5;
+
+        $this->setPleinTarif($Plein_tarif);
+        $this->setTarifEtudiant($Tarif_Etudiant);
+        $this->setMoinsdix($Moinsdix);
+        $this->setTarifNavigo($Tarif_Navigo);
     }
 
     public function fetch_media()
